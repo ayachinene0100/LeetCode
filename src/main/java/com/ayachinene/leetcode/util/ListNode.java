@@ -21,4 +21,17 @@ public class ListNode {
         }
         return p1 == p2;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        ListNode cur = this;
+        while (cur != null) {
+            sb.append(cur.val).append("->");
+            cur = cur.next;
+        }
+        if (!sb.isEmpty())
+            sb.delete(sb.length() - 2, sb.length());
+        return sb.toString();
+    }
 }
