@@ -18,11 +18,7 @@ class ListNodeTest {
     @Test
     void testEquals() {
         assertAll(() -> {
-            assertTrue(ListNode.equals(parseIntList(null), parseIntList(null)));
-        }, () -> {
             assertTrue(ListNode.equals(parseIntList(""), parseIntList("")));
-        }, () -> {
-            assertTrue(ListNode.equals(parseIntList(""), parseIntList(null)));
         }, () -> {
             assertTrue(ListNode.equals(parseIntList("1,2,3"), parseIntList("1,2,3")));
         }, () -> {
